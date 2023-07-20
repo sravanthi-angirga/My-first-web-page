@@ -1,0 +1,140 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page Default */
+html, body{
+    width: 100vw;
+    min-height: 100vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+/*General Classes*/
+.flex-start{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+
+.dark{
+    background: #000;
+    color: #fff;
+}
+
+/* Specifics */
+body{
+    flex-direction: column;
+    padding-bottom: 60px;
+}
+
+.navbar{
+    top: 0;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem 0.5rem 0.5rem;
+}
+
+.navbar__title{
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.navbar__navmenu{
+    width: 100%;
+    position: relative;
+}
+
+.navbar__links-button{
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+}
+
+.navbar__down-arrow{
+    font-size: 0.75rem;
+}
+
+.navbar__list{
+    position: fixed;
+    top: 70px;
+    left: 25px;
+    background: #000;
+    z-index: 1;
+    display: none;
+}
+
+.navbar__navmenu:hover .navbar__list,
+.navbar__navmenu:focus-within .navbar__list {
+    display: block;
+}
+
+.navbar__list-item{
+    margin: 0.5rem;
+}
+
+.navbar__list-item:last-child{
+    margin-right: 0;
+}
+
+.navbar__list-link{
+    color: #fff;
+}
+
+.main {
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.post{
+    scroll-snap-margin-top: 90px; /*for iOS */
+    scroll-margin-top: 90px;
+    width: 250px;
+    border: 1px solid black;
+    border-radius: 25px;
+    box-shadow: 4px 4px 10px #333 ;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .post{
+        width: 200px;
+    }  
+}
+
+.post__img{
+    display: block;
+    margin: 1rem auto;
+    width: 100%;
+    border: 1px solid whitesmoke;
+    border-radius: 25px;  
+}
+
+.post__img:hover{
+    border: none;
+    box-shadow: 4px 4px 10px #333;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    padding: 1rem 0.5rem 0.5rem;
+}
